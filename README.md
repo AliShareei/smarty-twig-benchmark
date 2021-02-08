@@ -1,6 +1,6 @@
 # An up-to-date Smarty versus Twig benchmark
 
-An *opinionated* comparison benchmark of the latest versions of Smarty3 and Twig.
+An *opinionated* comparison benchmark of the latest versions of Smarty v3 and Twig v3.
 
 TL;DR: Smarty is slower than Twig, Twig is faster than Smarty. Don't trust benchmarks from years ago.
 
@@ -35,18 +35,18 @@ The test templates are pretty simple:
 Don't take my word for it:
 
 * `composer install`
-* `php bench.php smarty` or `php bench.php twig`
+* `php bench.php smarty` or `php bench.php twig` or `php bench.php twig_reuse`
 
 ## Results
 
-With Smarty 3.1.31 and Twig 2.4.3, on PHP 7.1.7, 100000 iterations, compile time ignored, cache warmed, my machine, best time
+With Smarty 3.1.38 and Twig 3.3.0, on PHP 7.4.14, 100000 iterations, compile time ignored, cache warmed, my machine, best time
 of dozens of runs each:
 
 Benchmark | Time Taken
 --- | ---
-twig | 9.7 seconds
-twig_reuse | 7.6 seconds
-smarty | 17.8 seconds
+twig | 2.0 seconds
+twig_reuse | 1.6 seconds
+smarty | 3.1 seconds
 
 See the code for the difference between the twig and twig_reuse scenarios (basically: using the same Twig_TemplateWrapper instance, versus
 loading the template again. I'm not sure there's an equivalent for Smarty, but I'd be happy to include one if there is.)
