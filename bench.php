@@ -44,20 +44,18 @@ function setup($type)
             $smarty->setCompileDir(__DIR__ . '/cache');
             return $smarty;
         case 'twig':
-            $loader = new Twig_Loader_Filesystem('templates');
-
-            return new Twig_Environment($loader, [
-                'cache' => __DIR__ . '/cache',
-                'auto_reload' => false,
-            ]);
+			$loader = new \Twig\Loader\FilesystemLoader('templates');
+			
+			return new \Twig\Environment($loader, [
+				'cache' => __DIR__ . '/cache',
+			]);
 
         case 'twig_reuse':
-            $loader = new Twig_Loader_Filesystem('templates');
-
-            $env = new Twig_Environment($loader, [
-                'cache' => __DIR__ . '/cache',
-                'auto_reload' => false,
-            ]);
+			$loader = new \Twig\Loader\FilesystemLoader('templates');
+			
+			$env = new \Twig\Environment($loader, [
+				'cache' => __DIR__ . '/cache',
+			]);
 
             return $env->load('index.html.twig');
         default:
