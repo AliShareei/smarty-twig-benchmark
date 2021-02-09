@@ -1,4 +1,4 @@
-# An up-to-date Smarty versus Twig benchmark
+# An up-to-date Smarty V3 versus Twig V3  benchmark [10 February 2021]
 
 An *opinionated* comparison benchmark of the latest versions of Smarty v3 and Twig v3.
 
