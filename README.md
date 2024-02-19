@@ -1,6 +1,6 @@
-# An up-to-date Smarty V3 versus Twig V3  benchmark [10 February 2021]
+# An up-to-date Smarty V4.3.5 versus Twig V3.8.0  benchmark [19 February 2024]
 
-An *opinionated* comparison benchmark of the latest versions of Smarty v3 and Twig v3.
+An *opinionated* comparison benchmark of the latest versions of Smarty v4 and Twig v3.
 
 TL;DR: Smarty is slower than Twig, Twig is faster than Smarty. Don't trust benchmarks from years ago.
 
@@ -39,14 +39,14 @@ Don't take my word for it:
 
 ## Results
 
-With Smarty 3.1.38 and Twig 3.3.0, on PHP 7.4.14, 100000 iterations, compile time ignored, cache warmed, my machine, best time
+With Smarty 4.3.5 and Twig 3.8.0, on PHP 8.3, 100000 iterations, compile time ignored, cache warmed, my machine, best time
 of dozens of runs each:
 
 Benchmark | Time Taken
 --- | ---
-twig | 2.0 seconds
-twig_reuse | 1.6 seconds
-smarty | 3.1 seconds
+twig | 1.0 seconds
+twig_reuse | 0.8 seconds
+smarty | 1.7 seconds
 
 See the code for the difference between the twig and twig_reuse scenarios (basically: using the same Twig_TemplateWrapper instance, versus
 loading the template again. I'm not sure there's an equivalent for Smarty, but I'd be happy to include one if there is.)
