@@ -3,8 +3,8 @@
     "description": "Benchmark of Smarty versus Twig",
     "type": "project",
     "require": {
-        "smarty/smarty": "^4.3",
-        "twig/twig": "^3.8"
+        "smarty/smarty": "^5.4",
+        "twig/twig": "^3.11"
     },
     "license": "MIT",
     "authors": [
