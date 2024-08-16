@@ -25,7 +25,11 @@ The test templates are pretty simple:
 Don't take my word for it:
 
 * `composer install`
-* `php bench.php smarty`, `php bench.php smarty_ruse`, `php bench.php twig` or `php bench.php twig_reuse`
+* `php bench.php smarty`, `php bench.php smarty_reuse`, `php bench.php twig` or `php bench.php twig_reuse`
+
+Or, if you want to change the number of iterations (defaults to 100.000):
+
+* `php bench.php smarty 42`, `php bench.php smarty 999999`
 
 ## Results
 
